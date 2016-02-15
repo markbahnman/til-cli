@@ -22,7 +22,7 @@
     "test": "npm run compile && node ./lib/index.js",
     "compile": "babel -d lib/ src/"
   },
-  "author": "Mark Bahnman <mark.bahnman@gmail.com>",
+  "author": "Mark Bahnman <mark.bahnman@gmail.com> (https://github.com/markbahnman)",
   "license": "MIT",
   "dependencies": {
     "babel-polyfill": "^6.5.0",
