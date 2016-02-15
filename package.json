@@ -2,10 +2,19 @@
   "name": "til-cli",
   "version": "0.1.0",
   "description": "Tool to make saving quick TILs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markbahnman/til-cli"
+  },
+  "homepage": "https://github.com/markbahnman/til-cli",
+  "keywords": [
+    "til",
+    "cli"
+  ],
   "bin": {
     "til": "bin/til-cli.js"
   },
-  "main": "lib/index.js",
+  "main": "bin/til-cli.js",
   "scripts": {
     "start": "npm run compile && node ./lib/index.js",
     "lint": "eslint -c .eslintrc src",
