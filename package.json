@@ -15,6 +15,7 @@
     "til": "bin/til-cli.js"
   },
   "main": "bin/til-cli.js",
+  "preferGlobal": true,
   "scripts": {
     "start": "npm run compile && node ./lib/index.js",
     "lint": "eslint -c .eslintrc src",
