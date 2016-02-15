@@ -16,6 +16,8 @@ npm install -g til-cli
 From there run ```til``` to both setup your repository and create new TILs
 
 ## Plans for the future
+* Tests
+* Better error handling
 * Commands for editing TILs
 * Hooks to automatically push repo
 * Make it easy to hook into a static website generator such as gh-pages
