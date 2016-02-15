@@ -1,0 +1,35 @@
+{
+  "name": "til-cli",
+  "version": "0.1.0",
+  "description": "Tool to make saving quick TILs",
+  "bin": {
+    "til": "bin/til-cli.js"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "npm run compile && node ./lib/index.js",
+    "lint": "eslint -c .eslintrc src",
+    "lint-watch": "esw -c .eslintrc src --watch",
+    "test": "npm run compile && node ./lib/index.js",
+    "compile": "babel -d lib/ src/"
+  },
+  "author": "Mark Bahnman <mark.bahnman@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-polyfill": "^6.5.0",
+    "commander": "^2.9.0",
+    "inquirer": "^0.12.0",
+    "minimist": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-core": "^6.5.1",
+    "babel-eslint": "^4.1.8",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^5.0.0",
+    "eslint-plugin-import": "^0.13.0",
+    "eslint-watch": "^2.1.7"
+  }
+}
