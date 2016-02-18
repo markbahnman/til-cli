@@ -17,7 +17,8 @@ From there run ```til``` to both setup your repository and create new TILs
 
 ## Plans for the future
 * Tests
-* Better error handling
+* Better error handling?
 * Commands for editing TILs
 * Hooks to automatically push repo
+* Use actions to allow for creating TILs from a single command a la ```git commit -am "message"```
 * Make it easy to hook into a static website generator such as gh-pages
