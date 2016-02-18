@@ -32,3 +32,31 @@ export function mkdirIfNotExists(dir) {
     return mkdir(dir);
   });
 }
+
+export function saveRC(data) {
+  return new Promise((resolve, reject) => {
+    const extractedData = extractData({ ...config, ...data });
+    const prettyData = JSON.stringify(extractedData, null, 2);
+
+    fs.writeFile(getTILrc(), prettyData, (err) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(extractedData);
+      }
+    });
+  });
+}
+
+export function loadRC() {
+  return new Promise((resolve, reject) => {
+    fs.readFile(getTILrc(), 'utf8', (err, data) => {
+      // TODO check file persmissions
+      if (err) {
+        reject(err);
+      } else {
+        resolve(JSON.parse(data));
+      }
+    });
+  });
+}

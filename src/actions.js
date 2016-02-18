@@ -1,8 +1,8 @@
 import { forNewTIL, forSetup } from './questions';
 import childProcess from 'child_process';
 import { initRepo, addOrigin, commitTIL } from './git';
-import { mkdir, exists, mkdirIfNotExists } from './file_system';
-import { getRepo, safeTitle, saveRC } from './helpers';
+import { mkdir, exists, mkdirIfNotExists, safeRC} from './file_system';
+import { getRepo, safeTitle } from './helpers';
 
 export function openNewFileWithEditor(title, dir) {
   return getRepo().then((repo) => {

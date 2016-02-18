@@ -20,7 +20,7 @@
     "start": "npm run compile && node ./lib/index.js",
     "lint": "eslint -c .eslintrc src",
     "lint-watch": "esw -c .eslintrc src --watch",
-    "test": "npm run compile && node ./lib/index.js",
+    "test": "mocha --compilers js:babel-register test/",
     "compile": "babel -d lib/ src/"
   },
   "author": "Mark Bahnman <mark.bahnman@gmail.com> (https://github.com/markbahnman)",
@@ -37,9 +37,13 @@
     "babel-eslint": "^4.1.8",
     "babel-preset-es2015": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.5.2",
+    "chai": "^3.5.0",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^5.0.0",
     "eslint-plugin-import": "^0.13.0",
-    "eslint-watch": "^2.1.7"
+    "eslint-watch": "^2.1.7",
+    "mocha": "^2.4.5",
+    "sinon": "^1.17.3"
   }
 }
