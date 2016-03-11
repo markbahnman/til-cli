@@ -9,7 +9,7 @@ let config = {
 try {
   const tilrcRaw = fs.readFileSync(rc);
   const tilrc = JSON.parse(tilrcRaw);
-  config = { ...config, tilrc };
+  config = { ...config, ...tilrc };
 } catch (err) {
   // nothing
 }
