@@ -9,13 +9,6 @@ export function getTILrc() {
   return `${getUserHome()}/.tilrc`;
 }
 
-export function getRepo() {
-  return loadRC().then((rc) => {
-    const { repo } = rc;
-    return Promise.resolve(repo);
-  });
-}
-
 export function mergeData(oldData, newData) {
   return new Promise((resolve, reject) => {
     if (oldData && newData) {

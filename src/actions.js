@@ -2,25 +2,22 @@ import { forNewTIL, forSetup } from './questions';
 import childProcess from 'child_process';
 import { initRepo, addOrigin, commitTIL } from './git';
 import { mkdir, exists, mkdirIfNotExists, safeRC} from './file_system';
-import { getRepo, safeTitle } from './helpers';
+import { safeTitle } from './helpers';
+import config from './config';
 
 export function openNewFileWithEditor(title, dir) {
-  return getRepo().then((repo) => {
-    const tagDir = `${repo}${dir}`;
-    return mkdirIfNotExists(tagDir);
-  }).then(() => {
-    return getRepo();
-  }).then((repo) => {
+  const tagDir = `${config.repo}${dir}`;
+  return mkdirIfNotExists(tagDir).then(() => {
     return new Promise((resolve, reject) => {
       const alteredTitle = safeTitle(title);
-      const newFileName = `${repo}${dir}/${alteredTitle}.md` || `${Date.now().toString()}.md`;
+      const newFileName = `${config.repo}${dir}/${alteredTitle}.md` || `${Date.now().toString()}.md`;
 
       const editorENV = process.env.EDITOR || ['vim'];
       const editor = editorENV.split(' ');
       const child = childProcess.spawn(editor[0],
                                        [...editor.slice(1), newFileName],
                                        { stdio: 'inherit',
-                                         cwd: repo });
+                                         cwd: config.repo });
       child.on('error', (error) => {
         console.error('Something went wrong', error);
         reject(error);
