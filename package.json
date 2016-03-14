@@ -1,6 +1,6 @@
 {
   "name": "til-cli",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Tool to make saving quick TILs",
   "repository": {
     "type": "git",
@@ -21,7 +21,8 @@
     "lint": "eslint -c .eslintrc src",
     "lint-watch": "esw -c .eslintrc src --watch",
     "test": "mocha --compilers js:babel-register test/",
-    "compile": "babel -d lib/ src/"
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run compile"
   },
   "author": "Mark Bahnman <mark.bahnman@gmail.com> (https://github.com/markbahnman)",
   "license": "MIT",

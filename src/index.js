@@ -5,7 +5,7 @@ import { getTILrc } from './helpers';
 import { exists } from './file_system';
 
 program
-  .version('0.1.2')
+  .version('0.1.3')
   .parse(process.argv);
 
 exists(getTILrc())
