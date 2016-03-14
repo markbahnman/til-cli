@@ -1,7 +1,7 @@
 import { forNewTIL, forSetup } from './questions';
 import childProcess from 'child_process';
 import { initRepo, addOrigin, commitTIL } from './git';
-import { mkdir, exists, mkdirIfNotExists, safeRC} from './file_system';
+import { mkdir, exists, mkdirIfNotExists, saveRC } from './file_system';
 import { getRepo, safeTitle } from './helpers';
 
 export function openNewFileWithEditor(title, dir) {

@@ -1,5 +1,4 @@
 import { loadRC } from './file_system';
-import config from './config';
 
 export function getUserHome() {
   return process.env.HOME || process.env.USERPROFILE;
@@ -27,7 +26,7 @@ export function mergeData(oldData, newData) {
 
 }
 
-function extractData(data) {
+export function extractData(data) {
   let extractedData = {}; // eslint-disable-line prefer-const
   const wantedKeys = ['repo', 'origin'];
 
