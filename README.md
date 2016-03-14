@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/markbahnman/til-cli.svg?branch=master)](https://travis-ci.org/markbahnman/til-cli)
+
 # til-cli
 A command line tool to easily create a repo of TILs. Inspired by https://github.com/jbranchaud/til
 
